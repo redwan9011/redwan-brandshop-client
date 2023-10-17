@@ -1,9 +1,12 @@
+import Banner from "../../HomeComponents/Banner/Banner";
+import Brands from "../../HomeComponents/Brands/Brands";
 
 
 const Home = () => {
     return (
         <div>
-            Home page
+           <Banner></Banner>
+            <Brands></Brands>
         </div>
     );
 };
