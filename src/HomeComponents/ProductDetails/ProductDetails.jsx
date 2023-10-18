@@ -15,6 +15,22 @@ const ProductDetails = () => {
         setProduct(productdetails)
     }, [id, loadedProducts])
 
+    const handleCart = () => {
+        
+        fetch('http://localhost:3000/carts' , {
+            method: "POST",
+            headers: {
+                'content-type' : 'application.json',
+            },
+            body: JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+      
+    }
+
     return (
         <div>
             <Slider></Slider>
@@ -28,7 +44,7 @@ const ProductDetails = () => {
                     <h2>{product.price}$</h2>
                     <h4>{product.rating}</h4>
                     <div>
-                        <button className="btn w-full">Add to Cart</button>
+                        <button onClick={handleCart}  className="btn w-full">Add to Cart</button>
                     </div>
                 </div>
             </div>
