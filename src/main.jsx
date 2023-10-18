@@ -14,6 +14,8 @@ import Login from './Pages/Login/Register/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
 import Products from './HomeComponents/Products/Products';
+import ProductDetails from './HomeComponents/ProductDetails/ProductDetails';
+import Update from './HomeComponents/Update/Update';
 
 
 
@@ -33,6 +35,18 @@ const router = createBrowserRouter([
         element:<Products></Products> ,
         loader: ()=> fetch('http://localhost:3000/products')
        
+      },
+      {
+        path: "/details/:id",
+        element: <ProductDetails></ProductDetails> ,
+        loader: ()=> fetch(`http://localhost:3000/products`)
+        
+       
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update> ,
+        loader: ({params})=> fetch(`http://localhost:3000/products/${params.id}`)
       },
  
 

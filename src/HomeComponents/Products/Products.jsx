@@ -5,22 +5,22 @@ import ProductShow from "./ProductShow";
 
 const Products = () => {
     const brandName = useParams()
-    console.log(brandName);
+   
     const products = useLoaderData()
-    // console.log(products);
+   
 
     const [cards, setCards] = useState([])
 
     useEffect( ()=> {
-        const cardshow = products.filter(card => card.brand == brandName.name)
+        const cardshow = products.filter(card => card.brand.toUpperCase() == brandName.name.toUpperCase())
     
         setCards(cardshow)
     }, [brandName,products])
-    console.log(cards);
+    
     return (
-        <div>
+        <div className="grid grid-cols-2 gap-10">
             {
-                cards.map(card => <ProductShow key={card._id} card={card}></ProductShow>)
+                cards.map((card , ind) => <ProductShow key={ind} card={card}></ProductShow>)
             }
         </div>
     );
