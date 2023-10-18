@@ -13,7 +13,9 @@ import MyCart from './Pages/MyCart/MyCart';
 import Login from './Pages/Login/Register/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
-import PrivateRout from './PrivateRout/PrivateRout';
+import Products from './HomeComponents/Products/Products';
+
+
 
 
 const router = createBrowserRouter([
@@ -24,7 +26,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: ()=> fetch('/data.json')
       },
+      {
+        path: "/products/:name",
+        element:<Products></Products> ,
+        loader: ()=> fetch('http://localhost:3000/products')
+       
+      },
+ 
+
       {
         path: "/addproduct",
         element:<AdProduct></AdProduct> ,
