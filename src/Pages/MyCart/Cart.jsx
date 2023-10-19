@@ -45,15 +45,15 @@ const Cart = ({ cart , carts, setCarts}) => {
     return (
         <div>
             <div className="card  bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
-                    <img src={image} alt="brand image" className="rounded-xl" />
+                <figure className="lg:px-10 lg:pt-10">
+                    <img  src={image} alt="brand image" className="rounded-xl w-28 lg:w-40" />
                 </figure>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title">{name}</h2>
-                    <h4>{brand}</h4>
+                <div className="items-center text-center space-y-1">
+                    <h2 className="font-bold ">{name}</h2>
+                    <h4 className="font-semibold">{brand}</h4>
                     <p>{price}$</p>
-                    <div className="card-actions">
-                        <button className="btn btn-primary" onClick={() => handleDelte(_id)}>Delete</button>
+                    <div className="px-5 pb-4">
+                        <button className="bg-red-600 py-2 text-white text-sm rounded-xl w-full " onClick={() => handleDelte(_id)}>Delete</button>
                     </div>
                 </div>
             </div>
