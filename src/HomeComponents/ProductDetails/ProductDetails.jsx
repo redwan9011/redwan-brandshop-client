@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Slider from "./Slider";
+import Swal from "sweetalert2";
+
 
 
 
@@ -8,32 +10,45 @@ const ProductDetails = () => {
     const loadedProducts = useLoaderData()
 
     const { id } = useParams()
-    console.log(id);
+ 
     const [product, setProduct] = useState([])
+
     useEffect(() => {
         const productdetails = loadedProducts.find(detail => detail._id === id)
         setProduct(productdetails)
     }, [id, loadedProducts])
+// console.log(product.name);
+// console.log(product.brand);
 
-    const handleCart = () => {
-        
+const name =product.name;
+const brand = product.brand;
+const type = product.type;
+const price = product.price;
+const rating = product.rating;
+const image = product.image;
+const details = product.details;
+const alldata = {name, brand, type, price, rating, image, details}
+console.log();
+//    const { name, brand, type, price, rating, image, details,} = product
+
+    const handleAdCart = ()=> {
         fetch('http://localhost:3000/carts' , {
             method: "POST",
-            headers: {
-                'content-type' : 'application.json',
-            },
-            body: JSON.stringify(product)
+            headers: { 'content-type' : 'application/json'},
+            body: JSON.stringify(alldata)
         })
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            if(data.acknowledged){
+                Swal.fire('Add to Cart Succesfully')
+            }
         })
-      
     }
 
     return (
         <div>
-            <Slider></Slider>
+           
             <div className="card card-compact  bg-base-100 shadow-xl mt-10">
                 <figure><img src={product.image} alt="Shoes" /></figure>
                 <div className="card-body">
@@ -44,7 +59,7 @@ const ProductDetails = () => {
                     <h2>{product.price}$</h2>
                     <h4>{product.rating}</h4>
                     <div>
-                        <button onClick={handleCart}  className="btn w-full">Add to Cart</button>
+                        <button className="btn w-full" onClick={handleAdCart}>Add to Cart</button>
                     </div>
                 </div>
             </div>

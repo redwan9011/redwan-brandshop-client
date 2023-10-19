@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 const AdProduct = () => {
@@ -22,6 +23,9 @@ const AdProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            if(data.acknowledged) {
+                Swal.fire('Product Add SuccessFully')
+            }
         })
 
     }
