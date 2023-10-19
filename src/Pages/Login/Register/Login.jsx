@@ -75,7 +75,7 @@ const [error , setError] = useState(null)
         </div>
       </form>
 
-    <p className="text-center text-xl pb-4 font-semibold">Do not have an account? <Link to = "/register" className="text-red-700 font-bold hover:underline">Register</Link> </p>
+    <p className="text-center md:text-xl pb-4 font-semibold">Do not have an account? <Link to = "/register" className="text-red-700 font-bold hover:underline">Register</Link> </p>
 
     <div className="pb-5">
       {

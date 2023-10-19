@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import Slider from "./Slider";
+
 import Swal from "sweetalert2";
 
 
@@ -47,19 +47,17 @@ console.log();
     }
 
     return (
-        <div>
+        <div className="my-8">
            
-            <div className="card card-compact  bg-base-100 shadow-xl mt-10">
+            <div className="card card-compact  bg-base-100 shadow-xl mt-10 px-2 md:px-4">
                 <figure><img src={product.image} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{product.name}</h2>
-                    <p>{product.details}</p>
-                    <p>{product.brand}</p>
-                    <p>{product.type}</p>
-                    <h2>{product.price}$</h2>
-                    <h4>{product.rating}</h4>
+                    <h2 className="card-title md:text-2xl lg:text-3xl">{product.name}</h2>
+                    <p className="text-xl font-semibold">Brand: {product.brand}</p>
+                    <p className="text-base font-semibold">Type: {product.type}</p>
+                    <p className="text-slate-600 pb-4">{product.details}</p>
                     <div>
-                        <button className="btn w-full" onClick={handleAdCart}>Add to Cart</button>
+                        <button className="btn w-full bg-red-600 hover:bg-red-800 text-white" onClick={handleAdCart}>Add to Cart</button>
                     </div>
                 </div>
             </div>

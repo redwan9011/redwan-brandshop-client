@@ -31,10 +31,10 @@ const AdProduct = () => {
     }
 
     return (
-        <div className="my-10">
+        <div className="my-5 md:my-10">
             <form onSubmit={handleaddProducts} className=" space-y-5">
 
-             <div className="grid grid-cols-2 gap-8  w-full">
+             <div className="grid md:grid-cols-2 gap-3 md:gap-8  w-full">
              <div className="form-control">
                     <label className="input-group">
                         <span className="bg-red-600 text-white w-24 ">Name</span>
@@ -49,7 +49,7 @@ const AdProduct = () => {
                 </div>
              </div>
 
-             <div className="grid grid-cols-2 gap-8  w-full">
+             <div className="grid md:grid-cols-2 gap-3 md:gap-8  w-full">
              <div className="form-control">
                     <label className="input-group">
                         <span className="bg-red-600 text-white w-24 ">Type</span>
@@ -63,7 +63,7 @@ const AdProduct = () => {
                     </label>
                 </div>
              </div>
-             <div className="grid grid-cols-2 gap-8  w-full">
+             <div className="grid md:grid-cols-2 gap-3 md:gap-8  w-full">
              <div className="form-control">
                     <label className="input-group">
                         <span className="bg-red-600 text-white w-24 ">Rating</span>

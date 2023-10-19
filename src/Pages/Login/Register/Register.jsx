@@ -113,7 +113,7 @@ const [ error, setError ] = useState(null);
     </div>
   </form>
 
-<p className="text-center text-xl pb-4 font-semibold">Already have an account? <Link className="text-red-700 font-bold hover:underline" to = "/login">Login</Link> </p>
+<p className="text-center md:text-xl pb-4 font-semibold">Already have an account? <Link className="text-red-700 font-bold hover:underline" to = "/login">Login</Link> </p>
 
 <div className="pb-6">
   
