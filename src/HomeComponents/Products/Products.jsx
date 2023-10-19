@@ -18,11 +18,22 @@ const Products = () => {
     }, [brandName,products])
     
     return (
-        <div className="grid md:grid-cols-2 md:gap-10 my-10">
-            {
-                cards.map((card , ind) => <ProductShow key={ind} card={card}></ProductShow>)
-            }
-        </div>
+       <div>
+    
+
+       {
+        cards.length > 0 ?   <div className="grid md:grid-cols-2 md:gap-10 my-10">
+        {
+            cards.map((card , ind) => <ProductShow key={ind} card={card}></ProductShow>)
+        }
+    </div> :
+    <div className=" h-[55vh] flex items-center justify-center"> 
+        <h1 className="text-3xl font-bold">No Products Available Here</h1>
+
+
+    </div>
+       }
+       </div>
     );
 };
 

@@ -3,7 +3,7 @@
 const Banner = () => {
     return (
         <div className="mt-8">
-            <div className="hero min-h-[60vh]" style={{backgroundImage: 'url(https://i.ibb.co/Rj2RGsF/slider-banner-1.jpg)'}}>
+            <div className="hero min-h-[70vh]" style={{backgroundImage: 'url(https://i.ibb.co/Rj2RGsF/slider-banner-1.jpg)'}}>
   <div className=" "></div>
   <div className="w-full flex justify-start pl-3 lg:pl-20">
     <div className="text-black text-left">

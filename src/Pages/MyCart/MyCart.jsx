@@ -15,7 +15,8 @@ const MyCart = () => {
 
   
     return (
-        <div className="grid grid-cols-2 mt-3 mb-10 md:grid-cols-3 gap-8">
+        <div>
+          <div className="grid grid-cols-2 mt-3 mb-10 md:grid-cols-3 gap-8">
           {
             carts.map(cart => < Cart key={cart._id} 
               
@@ -24,6 +25,7 @@ const MyCart = () => {
               setCarts={setCarts}
               ></Cart> )
           }
+        </div>
         </div>
     );
 };

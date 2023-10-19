@@ -16,6 +16,8 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import Products from './HomeComponents/Products/Products';
 import ProductDetails from './HomeComponents/ProductDetails/ProductDetails';
 import Update from './HomeComponents/Update/Update';
+import PrivateRout from './PrivateRout/PrivateRout';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 
 
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <LayOuts></LayOuts>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -38,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <ProductDetails></ProductDetails> ,
+        element: <PrivateRout><ProductDetails></ProductDetails></PrivateRout>,
         loader: ()=> fetch(`http://localhost:3000/products`)
         
        
@@ -52,11 +55,11 @@ const router = createBrowserRouter([
 
       {
         path: "/addproduct",
-        element:<AdProduct></AdProduct> ,
+        element: <PrivateRout><AdProduct></AdProduct></PrivateRout> ,
       },
       {
         path: "/mycart",
-        element: <MyCart></MyCart> ,
+        element: <PrivateRout><MyCart></MyCart></PrivateRout> ,
         loader: ()=> fetch('http://localhost:3000/carts')
       },
       {
