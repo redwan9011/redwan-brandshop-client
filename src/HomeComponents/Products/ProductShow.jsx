@@ -1,11 +1,16 @@
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom";
-
 import { BsFillStarFill } from "react-icons/bs";
+
 const ProductShow = ({card}) => {
     const {name, brand, type, price, rating, image, _id,} = card || {}
     return (
+       
+
         <div className=" md:my-2">
+
+           
+
        <div className="card md:flex-col lg:flex-row card-side  shadow-xl">
   <figure><img className="md:w-44 lg:w-48 md:h-40 lg:h-44"  src={image} alt="apple image"/></figure>
   <div className="card-body ">

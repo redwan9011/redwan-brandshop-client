@@ -59,7 +59,7 @@ const AdProduct = () => {
                 <div className="form-control">
                     <label className="input-group">
                         <span className="bg-red-600 text-white w-24">Price</span>
-                        <input type="text" name="price" placeholder="Brand name" className="input input-bordered focus:outline-none w-full" />
+                        <input type="text" name="price" placeholder="Price" className="input input-bordered focus:outline-none w-full" />
                     </label>
                 </div>
              </div>

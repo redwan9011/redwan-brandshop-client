@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import ProductShow from "./ProductShow";
+import Slider from "./Slider";
 
 
 const Products = () => {
@@ -22,11 +23,14 @@ const Products = () => {
     
 
        {
-        cards.length > 0 ?   <div className="grid md:grid-cols-2 md:gap-10 my-10">
+        cards.length > 0 ?  <div>
+            <div><Slider></Slider></div>
+<div className="grid md:grid-cols-2 md:gap-10 my-10">
         {
             cards.map((card , ind) => <ProductShow key={ind} card={card}></ProductShow>)
         }
-    </div> :
+    </div>
+        </div> :
     <div className=" h-[55vh] flex items-center justify-center"> 
         <h1 className="text-3xl font-bold">No Products Available Here</h1>
 
