@@ -20,7 +20,7 @@ const Update = () => {
     const prodcuts = { name, brand, type, price, rating, image, details, }
     console.log(prodcuts);
 
-    fetch(`https://redwan-brandshop-server-c3q7567oo-redwan-islams-projects.vercel.app/products/${_id}` , {
+    fetch(`https://redwan-brandshop-server-dhu9wjsv3-redwan-islams-projects.vercel.app/products/${_id}` , {
         method: "PUT",
         headers: {'content-type' : 'application/json'},
         body: JSON.stringify(prodcuts)

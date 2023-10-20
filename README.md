@@ -1,8 +1,10 @@
-# React + Vite
+Website live link: https://redwan-brandshop.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website details: 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Home page have 6 section: Nav, banner, Service, Card, Discount, Footer.
+* Navbar have home Rout, Ad Product roout and my cart Rout and Login/ Register
+* When user click login page the will see a login page, they can login , if he/she have no account then he/she will go to the register page , there he/she will can register with his name, image, email, and password
+* In home pages Card's have Brand Name, when user click on the Name he will go to another page and see that brand related products 
+* prodcuts have name, brand name, price and also two buttons, 1. details, 2. update,
+* if user logged in the site then he can  seee detai

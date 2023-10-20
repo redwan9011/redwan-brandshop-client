@@ -3,12 +3,13 @@ import Brands from "../../HomeComponents/Brands/Brands";
 import Service from "./Service";
 
 
+
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
 
-            <Service></Service>
+           <Service></Service>
             <Brands></Brands>
 
             <div className="mt-8 mb-8">
