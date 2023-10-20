@@ -32,7 +32,7 @@ console.log();
 //    const { name, brand, type, price, rating, image, details,} = product
 
     const handleAdCart = ()=> {
-        fetch('http://localhost:3000/carts' , {
+        fetch('https://redwan-brandshop-server-c3q7567oo-redwan-islams-projects.vercel.app/carts' , {
             method: "POST",
             headers: { 'content-type' : 'application/json'},
             body: JSON.stringify(alldata)

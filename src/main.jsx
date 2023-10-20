@@ -36,20 +36,20 @@ const router = createBrowserRouter([
       {
         path: "/products/:name",
         element:<Products></Products> ,
-        loader: ()=> fetch('http://localhost:3000/products')
+        loader: ()=> fetch('https://redwan-brandshop-server-c3q7567oo-redwan-islams-projects.vercel.app/products')
        
       },
       {
         path: "/details/:id",
         element: <PrivateRout><ProductDetails></ProductDetails></PrivateRout>,
-        loader: ()=> fetch(`http://localhost:3000/products`)
+        loader: ()=> fetch(`https://redwan-brandshop-server-c3q7567oo-redwan-islams-projects.vercel.app/products`)
         
        
       },
       {
         path: "/update/:id",
         element: <Update></Update> ,
-        loader: ({params})=> fetch(`http://localhost:3000/products/${params.id}`)
+        loader: ({params})=> fetch(`https://redwan-brandshop-server-c3q7567oo-redwan-islams-projects.vercel.app/products/${params.id}`)
       },
  
 
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/mycart",
         element: <PrivateRout><MyCart></MyCart></PrivateRout> ,
-        loader: ()=> fetch('http://localhost:3000/carts')
+        loader: ()=> fetch('https://redwan-brandshop-server-c3q7567oo-redwan-islams-projects.vercel.app/carts')
       },
       {
         path: "/login",

@@ -20,7 +20,7 @@ const Cart = ({ cart , carts, setCarts}) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/carts/${_id}`, {
+                fetch(`https://redwan-brandshop-server-c3q7567oo-redwan-islams-projects.vercel.app/carts/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
